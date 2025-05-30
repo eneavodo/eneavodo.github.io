@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enea Vodo Website</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    /* ... i tuoi stili ... */
+  </style>
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: gray;
+      text-decoration: none;
+    }
+
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .experience-item,
+    .education-item,
+    .contact-item {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #fafafa;
+      border-left: 3px solid #333;
+    }
+
+    .toggle-btn {
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .logo-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .logo-link:hover {
+      color: gray;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top bar with name and menu -->
+  <header class="topbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">Enea Vodo</a>
+    </div>
+    <nav class="navbar">
+      <a href="#education">Education</a>
+      <a href="#experience">Work Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div style="display: flex; align-items: center; gap: 50px; margin: 20px auto; max-width: 800px;">
+      <img src="en.png" alt="Enea Vodo" style="width: 130px; border-radius: 10px;" />
+      <p style="font-size: 1em; line-height: 1.6;"><em>
+        Hello, I'm <strong>Enea Vodo</strong>, born in Lushnje (Albania), where I lived until I was 18 years old.
+        I completed my higher education in Civil Engineering at the Polytechnic University of Tirana.
+        During the last years of my studies, I worked for 7 years for the leading pay-per-view media company at that time.
+        In 2019, I moved to Italy and started studying Digital Humanities at the University of Pisa, where I graduated in 2025.
+      </em></p>
+    </div>
+    <br><br><br>
+    <!-- Education Section -->
+    <section id="education">
+      <h2 style="color: rgb(6, 1, 72);">Education</h2>
+      <button class="toggle-btn" onclick="toggleSection('eduList')">Show/Hide Education</button>
+      <div id="eduList">
+        <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3>Bachelor’s Degree in Civil Engineering - Polytechnic University of Tirana</h3>
+            <p><strong>Graduation Year:</strong> 2013</p>
+          </div>
+          <img src="logo_upt.png" alt="UPT Logo" style="height: 80px; margin-left: 20px;" />
+        </div>
+        <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+          <h3>Master’s Degree in Civil Engineering - Polytechnic University of Tirana</h3>
+          <p><strong>Graduation Year:</strong> 2018</p>
+          <p>Thesis: The impact of the subgrade bearing capacity on the cost of road layer construction</p>
+          </div>
+          <img src="logo_upt.png" alt="UPT Logo" style="height: 80px; margin-left: 20px;" />
+        </div>
+        <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+          <h3>Degree in Digital Humanities - University of Pisa</h3>
+          <p><strong>Expected Graduation:</strong> 2025</p>
+          <p>Thesis: The metaverse today: a data-driven analysis of user activity</p>
+          </div>
+          <img src="pisa.png" alt="Uni Pisa Logo" Logo" style="height: 65px; margin-left: 20px;" />
+        </div>
+        <div class="education-item">
+          <h3>High School Diploma</h3>
+          <p><strong>Year:</strong> 2009</p>
+          <p>Diploma obtained in Albania</p>
+        </div>
+      </div>
+    </section>
+    <br>
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <h2 style="color: rgb(6, 1, 72);">Work Experience</h2>
+      <button class="toggle-btn" onclick="toggleSection('experienceList')">Show/Hide Experience</button>
+      <div id="experienceList">
+        <div class="experience-item" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3>Social Media Manager</h3>
+            <p><strong>Period:</strong> June 2012 – July 2014</p>
+            <p>Responsible for managing online presence and community engagement across platforms.</p>
+          </div>
+          <img src="Digitalb_logo.png" alt="DigitAlb Logo" style="height: 60px; margin-left: 20px;" />
+        </div>
+
+        <div class="experience-item" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3>Office Coordinator</h3>
+            <p><strong>Period:</strong> June 2014 – August 2019</p>
+            <p>Collaborated on organizational logistics and supported internal process improvement.</p>
+          </div>
+          <img src="Digitalb_logo.png" alt="DigitAlb Logo" style="height: 60px; margin-left: 20px;" />
+        </div>
+      </div>
+
+    </section>
+    <br>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 style="color: rgb(6, 1, 72);">Contact</h2>
+      <div class="contact-item">
+        <p><strong>Email:</strong> eneavodo@email.com</p>
+        <p><strong>Phone:</strong> +39 370 375 3513</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/enea-vodo-970a2716a/" target="_blank">linkedin.com/in/enea-vodo</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; Enea Vodo. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
