@@ -119,6 +119,47 @@
       text-decoration: none;
     }
 
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8em;
+      cursor: pointer;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .navbar a {
+        padding: 10px;
+        border-top: 1px solid #555;
+      }
+
+      .menu-toggle {
+        display: block;
+        color: white;
+      }
+
+      .navbar.active {
+        display: flex;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -128,18 +169,20 @@
     <div class="logo">
       <a href="index.html" class="logo-link">Enea Vodo</a>
     </div>
-    <nav class="navbar">
-      <a href="#education">Education</a>
-      <a href="#experience">Work Experience</a>
-      <a href="#contact">Contact</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="navbar" id="mobileMenu">
+      <a href="#education" onclick="toggleMenu()">Education</a>
+      <a href="#experience" onclick="toggleMenu()">Work Experience</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
     </nav>
   </header>
+
 
   <div class="container">
     <div style="display: flex; align-items: center; gap: 50px; margin: 20px auto; max-width: 800px;">
       <img src="en.png" alt="Enea Vodo" style="width: 130px; border-radius: 10px;" />
       <p style="font-size: 1em; line-height: 1.6;"><em>
-        Hello, I'm <strong>Enea Vodo</strong>, born in Lushnje (Albania), where I lived until I was 18 years old.
+        I'm <strong>Enea Vodo</strong>, born in Lushnje (Albania), where I lived until I was 18 years old.
         I completed my higher education in Civil Engineering at the Polytechnic University of Tirana.
         During the last years of my studies, I worked for 7 years for the leading pay-per-view media company at that time.
         In 2019, I moved to Italy and started studying Digital Humanities at the University of Pisa, where I graduated in 2025.
@@ -227,6 +270,12 @@
     function toggleSection(sectionId) {
       const section = document.getElementById(sectionId);
       section.classList.toggle("hidden");
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
     }
   </script>
 </body>
